@@ -1,0 +1,19 @@
+Script started on Thu 01 Oct 2015 04:39:54 PM PDT
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ whoam i[K[Ki
+wlc2013
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ echo $shell[K[K[K[K[KSHELL
+/bin/bash
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ pwd
+/homes/wlc2013
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ u[Kuname -a [K
+Linux klaatu.cs.washington.edu 4.0.6-300.fc22.x86_64 #1 SMP Tue Jun 23 13:58:53 UTC 2015 x86_64 x86_64 x86_64 GNU/Linux
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ gcc -v[K-version -std= [Kc11
+gcc (GCC) 5.1.1 20150618 (Red Hat 5.1.1-4)
+Copyright (C) 2015 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ exit
+exit
+
+Script done on Thu 01 Oct 2015 04:40:41 PM PDT

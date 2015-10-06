@@ -1,0 +1,27 @@
+Wenlu Cheng, CSE 374, homework 1 part 2
+
+1.
+The wc utility displays the number of lines, words, and bytes contained in each input file, or
+standard input (if no file is specified) to the standard output.
+The -l option shows the number of lines in each input file is written to the standard output.
+2.
+139  182 6795 etc/passwd
+3.
+kill
+4.
+home directory
+5.
+PWD - store the path to my working directory
+SHELL- contains the name of the running, interactive shell
+PATH - contains a colon-separated list of directories in which the system looks for executable files.
+6.
+Find
+7.
+Which command shows the full path of a shell command. However, Find comman search for files in directory
+8.
+echo "Hello World" > something saves the string "Hello World" into the some file.
+echo Hello World only prints "Hello World"
+9.
+It overwrote the previous file.
+10.
+The previous file appended the new text we input.

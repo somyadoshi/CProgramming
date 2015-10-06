@@ -1,0 +1,198 @@
+Script started on Sat 03 Oct 2015 02:21:32 PM PDT
+]0;wlc2013@klaatu:~/hw1[wlc2013@klaatu hw1]$ echo "Hellow[K W[Kworld"[C
+Hello world
+]0;wlc2013@klaatu:~/hw1[wlc2013@klaatu hw1]$ passwd
+Changing password for user wlc2013.
+Changing password for wlc2013.
+(current) UNIX password: 
+New password: 
+Retype new password: 
+passwd: all authentication tokens updated successfully.
+]0;wlc2013@klaatu:~/hw1[wlc2013@klaatu hw1]$ date
+Sat Oct  3 14:22:18 PDT 2015
+]0;wlc2013@klaatu:~/hw1[wlc2013@klaatu hw1]$ cd ~
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ pw[Kwd
+/homes/wlc2013
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ cd ~
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ ls
+[0m[38;5;33mhw0[0m  [38;5;33mhw1[0m  [38;5;40msecretfile[0m
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ mkdir fi[K[Ktemp
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ mv temp files
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ cd files/
+]0;wlc2013@klaatu:~/files[wlc2013@klaatu files]$ date > now
+]0;wlc2013@klaatu:~/files[wlc2013@klaatu files]$ cat now
+Sat Oct  3 14:22:57 PDT 2015
+]0;wlc2013@klaatu:~/files[wlc2013@klaatu files]$ cp now before
+]0;wlc2013@klaatu:~/files[wlc2013@klaatu files]$ ls -l
+total 8
+-rw-r--r-- 1 wlc2013 ugrad_uw 29 Oct  3 14:23 before
+-rw-r--r-- 1 wlc2013 ugrad_uw 29 Oct  3 14:22 now
+]0;wlc2013@klaatu:~/files[wlc2013@klaatu files]$ cat [K[K[K[Kecho > temp
+]0;wlc2013@klaatu:~/files[wlc2013@klaatu files]$ mv temp test
+]0;wlc2013@klaatu:~/files[wlc2013@klaatu files]$ d[Kcd ..
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ rm -r files/
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ echo "Its[K's [K[Ks a sc[Kecret!" > secretfile
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ chom[K[Kmod 555 sc[Kecretfile 
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ cat "hahaha" >secretfile 
+bash: secretfile: Permission denied
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ ls- l
+bash: ls-: command not found
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ ls -l
+total 12
+drwxr-xr-x 2 wlc2013 ugrad_uw 4096 Oct  2 23:54 [0m[38;5;33mhw0[0m
+drwxr-xr-x 2 wlc2013 ugrad_uw 4096 Oct  3 14:21 [38;5;33mhw1[0m
+-r-xr-xr-x 1 wlc2013 ugrad_uw   15 Oct  3 14:24 [38;5;40msecretfile[0m
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ chmod 333 secretfile 
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ ls -l
+total 12
+drwxr-xr-x 2 wlc2013 ugrad_uw 4096 Oct  2 23:54 [0m[38;5;33mhw0[0m
+drwxr-xr-x 2 wlc2013 ugrad_uw 4096 Oct  3 14:21 [38;5;33mhw1[0m
+--wx-wx-wx 1 wlc2013 ugrad_uw   15 Oct  3 14:24 [38;5;40msecretfile[0m
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ cat secretfile 
+cat: secretfile: Permission denied
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ uname -a[Kr
+4.0.6-300.fc22.x86_64
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ ps [K[K[Kps aux
+USER       PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root         1  0.0  0.1  52220  5612 ?        Ss   Sep23   0:11 /usr/lib/systemd/systemd --switched-root --sy
+root         2  0.0  0.0      0     0 ?        S    Sep23   0:00 [kthreadd]
+root         3  0.0  0.0      0     0 ?        S    Sep23   0:01 [ksoftirqd/0]
+root         5  0.0  0.0      0     0 ?        S<   Sep23   0:00 [kworker/0:0H]
+root         7  0.0  0.0      0     0 ?        S    Sep23   3:10 [rcu_sched]
+root         8  0.0  0.0      0     0 ?        S    Sep23   0:00 [rcu_bh]
+root         9  0.0  0.0      0     0 ?        S    Sep23   2:06 [rcuos/0]
+root        10  0.0  0.0      0     0 ?        S    Sep23   0:00 [rcuob/0]
+root        11  0.0  0.0      0     0 ?        S    Sep23   0:00 [migration/0]
+root        12  0.0  0.0      0     0 ?        S    Sep23   0:00 [migration/1]
+root        13  0.0  0.0      0     0 ?        S    Sep23   0:01 [ksoftirqd/1]
+root        15  0.0  0.0      0     0 ?        S<   Sep23   0:00 [kworker/1:0H]
+root        16  0.0  0.0      0     0 ?        S    Sep23   2:09 [rcuos/1]
+root        17  0.0  0.0      0     0 ?        S    Sep23   0:00 [rcuob/1]
+root        18  0.0  0.0      0     0 ?        S<   Sep23   0:00 [khelper]
+root        19  0.0  0.0      0     0 ?        S    Sep23   0:00 [kdevtmpfs]
+root        20  0.0  0.0      0     0 ?        S<   Sep23   0:00 [netns]
+root        21  0.0  0.0      0     0 ?        S<   Sep23   0:00 [perf]
+root        22  0.0  0.0      0     0 ?        S<   Sep23   0:00 [writeback]
+root        23  0.0  0.0      0     0 ?        SN   Sep23   0:00 [ksmd]
+root        24  0.0  0.0      0     0 ?        SN   Sep23   0:00 [khugepaged]
+root        25  0.0  0.0      0     0 ?        S<   Sep23   0:00 [crypto]
+root        26  0.0  0.0      0     0 ?        S<   Sep23   0:00 [kintegrityd]
+root        27  0.0  0.0      0     0 ?        S<   Sep23   0:00 [bioset]
+root        28  0.0  0.0      0     0 ?        S<   Sep23   0:00 [kblockd]
+root        29  0.0  0.0      0     0 ?        S<   Sep23   0:00 [ata_sff]
+root        30  0.0  0.0      0     0 ?        S<   Sep23   0:00 [md]
+root        31  0.0  0.0      0     0 ?        S<   Sep23   0:00 [devfreq_wq]
+root        35  0.0  0.0      0     0 ?        S    Sep23   0:00 [kswapd0]
+root        36  0.0  0.0      0     0 ?        S    Sep23   0:00 [fsnotify_mark]
+root        46  0.0  0.0      0     0 ?        S<   Sep23   0:00 [kthrotld]
+root        47  0.0  0.0      0     0 ?        S<   Sep23   0:00 [acpi_thermal_pm]
+root        49  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_0]
+root        50  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_0]
+root        51  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_1]
+root        52  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_1]
+root        53  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_2]
+root        54  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_2]
+root        55  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_3]
+root        56  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_3]
+root        57  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_4]
+root        58  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_4]
+root        59  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_5]
+root        60  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_5]
+root        65  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_6]
+root        66  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_6]
+root        68  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_7]
+root        69  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_7]
+root        72  0.0  0.0      0     0 ?        S<   Sep23   0:00 [kpsmoused]
+root        73  0.0  0.0      0     0 ?        S<   Sep23   0:00 [dm_bufio_cache]
+root        74  0.0  0.0      0     0 ?        S<   Sep23   0:00 [ipv6_addrconf]
+root        75  0.0  0.0      0     0 ?        S<   Sep23   0:00 [deferwq]
+root       289  0.0  0.0      0     0 ?        S    Sep23   0:00 [scsi_eh_8]
+root       290  0.0  0.0      0     0 ?        S<   Sep23   0:00 [scsi_tmf_8]
+root       293  0.0  0.0      0     0 ?        S<   Sep23   0:01 [kworker/1:1H]
+root       298  0.0  0.0      0     0 ?        S<   Sep23   0:01 [kworker/0:1H]
+root       312  0.0  0.0      0     0 ?        S    Sep23   0:00 [jbd2/sda2-8]
+root       313  0.0  0.0      0     0 ?        S<   Sep23   0:00 [ext4-rsv-conver]
+root       385  0.0  0.0      0     0 ?        S<   Sep23   0:00 [rpciod]
+root       393  0.0  0.5  53736 22840 ?        Ss   Sep23   0:09 /usr/lib/systemd/systemd-journald
+root       400  0.0  0.0 118532  2792 ?        Ss   Sep23   0:00 /usr/sbin/lvmetad -f
+root       429  0.0  0.0  43268  3344 ?        Ss   Sep23   0:00 /usr/lib/systemd/systemd-udevd
+root       447  0.0  0.0      0     0 ?        S    Sep23   0:00 [vballoon]
+root       463  0.0  0.0      0     0 ?        S<   Sep23   0:00 [ttm_swap]
+root       478  0.0  0.0      0     0 ?        S    Sep23   0:00 [jbd2/sdc1-8]
+root       479  0.0  0.0      0     0 ?        S<   Sep23   0:00 [ext4-rsv-conver]
+root       483  0.0  0.0      0     0 ?        S<   Sep23   0:00 [hd-audio0]
+root       494  0.0  0.0      0     0 ?        S    Sep23   0:01 [jbd2/sda3-8]
+root       496  0.0  0.0      0     0 ?        S<   Sep23   0:00 [ext4-rsv-conver]
+root       504  0.0  0.0      0     0 ?        S    Sep23   0:00 [jbd2/sda4-8]
+root       505  0.0  0.0      0     0 ?        S<   Sep23   0:00 [ext4-rsv-conver]
+root       520  0.0  0.0  24304  2788 ?        Ss   Sep23   0:03 /usr/lib/systemd/systemd-logind
+root       522  0.0  0.4 244748 17696 ?        Ssl  Sep23   0:01 /usr/sbin/rsyslogd -n
+dbus       525  0.0  0.0  52176  3940 ?        Ss   Sep23   0:02 /usr/bin/dbus-daemon --system --address=syste
+root       538  0.0  0.0 203328  3300 ?        Ssl  Sep23   0:01 /usr/sbin/gssproxy -D
+root       556  0.0  0.0 111628  1744 tty1     Ss+  Sep23   0:00 /sbin/agetty --noclear tty1 linux
+root       562  0.0  0.0  23800  1980 ?        Ss   Sep23   0:00 /usr/sbin/atd -f
+root       592  0.0  0.0      0     0 ?        S<   Sep23   0:00 [cfg80211]
+root       779  0.0  0.0  10708  1616 ?        Ss   Sep23   0:00 /usr/local/bin/sshthrottle
+root       805  0.0  0.1  64908  5660 ?        Ss   Sep23   0:01 /usr/sbin/sshd -D
+root       809  0.0  0.0  25544  1312 ?        Ss   Sep23   0:00 /usr/sbin/xinetd -stayalive -pidfile /var/run
+opendkim   818  0.0  0.1  89248  4516 ?        Ssl  Sep23   0:07 /usr/sbin/opendkim -x /etc/opendkim.conf -P /
+root       819  0.0  0.1 420716  5068 ?        Ssl  Sep23   0:15 /usr/sbin/automount --pid-file /run/autofs.pi
+root       859  0.0  0.0 116952  3060 ?        S    Sep23   0:00 sendmail-dummy
+smmsp      876  0.0  0.1  65824  4192 ?        Ss   Sep23   0:00 sendmail: Queue runner@01:00:00 for /var/spoo
+root       881  0.0  0.0 125780  3000 ?        Ss   Sep23   0:01 /usr/sbin/crond -n
+ntp        883  0.0  0.1  25176  4088 ?        Ss   Sep23   0:11 /usr/sbin/ntpd -u ntp:ntp -g
+polkitd    989  0.0  0.3 528752 12548 ?        Ssl  Sep23   0:00 /usr/lib/polkit-1/polkitd --no-debug
+root      1225  0.0  0.0   4340  1692 ?        Ss   Sep23   0:00 /usr/sbin/acpid -f
+arensd    3355  0.0  0.1  44992  4704 ?        Ss   Oct02   0:00 /usr/lib/systemd/systemd --user
+arensd    3360  0.0  0.0 103484  1964 ?        S    Oct02   0:00 (sd-pam)
+arensd    3795  0.0  0.0 127664  3264 ?        Ss   Oct02   0:05 tmux
+arensd    4165  0.0  0.0 117088  3564 pts/6    Ss+  Oct02   0:00 -bash
+arensd    5607  0.0  0.0 117088  3532 pts/2    Ss+  Oct02   0:00 -bash
+root     13271  0.0  0.0      0     0 ?        S    Oct02   0:00 [kworker/u4:0]
+root     17532  0.0  0.2 129628  8224 ?        Ss   11:10   0:00 sshd: wlam93 [priv]
+wlam93   17554  0.0  0.1  44992  4628 ?        Ss   11:10   0:00 /usr/lib/systemd/systemd --user
+wlam93   17559  0.0  0.0 103588  2048 ?        S    11:10   0:00 (sd-pam)
+wlam93   17563  0.0  0.0 129628  3856 ?        S    11:10   0:00 sshd: wlam93@pts/4
+wlam93   17576  0.0  0.0 117088  3524 pts/4    Ss   11:10   0:00 -bash
+root     18030  0.0  0.0      0     0 ?        S    12:04   0:00 [kworker/0:3]
+root     18058  0.0  0.2 129628  8280 ?        Ss   12:06   0:00 sshd: wlam93 [priv]
+wlam93   18084  0.0  0.0 129628  3540 ?        S    12:06   0:00 sshd: wlam93@notty
+wlam93   18097  0.0  0.0  55660  3876 ?        Ss   12:06   0:00 /usr/libexec/openssh/sftp-server
+wlam93   18701  0.0  0.6 482788 27296 pts/4    Sl+  12:54   0:00 emacs
+root     19065  0.0  0.0      0     0 ?        S    13:50   0:00 [kworker/0:0]
+root     19264  0.0  0.0      0     0 ?        S    13:57   0:00 [kworker/1:0]
+root     19634  0.0  0.0      0     0 ?        S    14:18   0:00 [kworker/1:3]
+root     19635  0.0  0.2 129624  8172 ?        Ss   14:18   0:00 sshd: wlc2013 [priv]
+wlc2013  19659  0.0  0.1  44996  4636 ?        Ss   14:19   0:00 /usr/lib/systemd/systemd --user
+wlc2013  19664  0.0  0.0 103588  2048 ?        S    14:19   0:00 (sd-pam)
+wlc2013  19668  0.0  0.0 129624  3872 ?        R    14:19   0:00 sshd: wlc2013@pts/0
+wlc2013  19681  0.0  0.0 117088  3396 pts/0    Ss   14:19   0:00 -bash
+root     19728  0.0  0.0      0     0 ?        S    14:19   0:00 [kworker/u4:1]
+wlc2013  19737  0.0  0.0 115724  2056 pts/0    S+   14:21   0:00 script hw1.part1
+wlc2013  19739  0.0  0.0 115728  1164 pts/0    S+   14:21   0:00 script hw1.part1
+wlc2013  19740  0.0  0.0 117088  3456 pts/1    Ss   14:21   0:00 bash -i
+root     19788  0.0  0.0      0     0 ?        S    14:23   0:00 [kworker/1:1]
+wlc2013  19805  0.0  0.0 153188  3820 pts/1    R+   14:28   0:00 ps aux
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ cd ~/et[K[K[K[K[K[K[Kcd t[Ktec/p[K[K[K[K[Kt[Ketc/pas[K[K[K[K[K[K[K~/t[Ketc/p[K[K[K[K[K[K[K[K[K[Kcd t[Ketc/p[K[K[K[K[K[K[K[Kcd ~/etc.[K/passwd[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kcd[K[Kls
+[0m[38;5;33mhw0[0m  [38;5;33mhw1[0m  [38;5;40msecretfile[0m
+]0;wlc2013@klaatu:~[wlc2013@klaatu ~]$ cd ..
+]0;wlc2013@klaatu:/homes[wlc2013@klaatu homes]$ cd .[K[K[K[Kls
+[0m[38;5;33mad827[0m     [38;5;33mbaod[0m      [38;5;33mcimclees[0m  [38;5;33mhanx22[0m    [38;5;33mjknaz[0m     [38;5;33mlalith[0m    [38;5;33mnatatp[0m    [38;5;33mrikeda01[0m  [38;5;33msimonbw[0m   [38;5;33mvasisht[0m   [38;5;33myjzhang[0m
+[38;5;33magrigore[0m  [38;5;33mbraunmbb[0m  [38;5;33mcrgores[0m   [38;5;33mharmoc3[0m   [38;5;33mjmlee129[0m  [38;5;33mlamemmet[0m  [38;5;33mnfarn[0m     [38;5;33mrs114[0m     [38;5;33msoravs[0m    [38;5;33mvik10[0m     [38;5;33mzhangm3[0m
+[38;5;33mahnj12[0m    [38;5;33mbriluu[0m    [38;5;33mcx4[0m       [38;5;33mhughhig1[0m  [38;5;33mjoshroll[0m  [38;5;33mleejoo00[0m  [38;5;33mnhanchau[0m  [38;5;33mruchik2[0m   [38;5;33mtej5[0m      [38;5;33mwbrugato[0m  [38;5;33mzicong[0m
+[38;5;33majavidan[0m  [38;5;33mbrocksn[0m   [38;5;33mdennyly[0m   [38;5;33mirenecyl[0m  [38;5;33mjty0301[0m   [38;5;33mliukui17[0m  [38;5;33mnidongl[0m   [38;5;33msaltzp[0m    [38;5;33mtimluong[0m  [38;5;33mweiyou16[0m  [38;5;33mzihaow2[0m
+[38;5;33mantaes[0m    [38;5;33mbwg2[0m      [38;5;33mdhk0927[0m   [38;5;33mjbenhi[0m    [38;5;33mkanghl[0m    [38;5;33mluxunx[0m    [38;5;33mnsjoshi[0m   [38;5;33mSAVE[0m      [38;5;33mtl34[0m      [38;5;33mwlam93[0m    [38;5;33mzqg[0m
+[38;5;33marensd[0m    [38;5;33mbz2013[0m    [38;5;33mdmhleung[0m  [38;5;33mjbjorge[0m   [38;5;33mkempk[0m     [38;5;33mmblac6[0m    [38;5;33mnyang5[0m    [38;5;33mscx1107[0m   [38;5;33mtng14[0m     [38;5;33mwlc2013[0m
+[38;5;33matn1908[0m   [38;5;33mcaitj95[0m   [38;5;33mecook10[0m   [38;5;33mjengj2[0m    [38;5;33mkencross[0m  [38;5;33mmgmiller[0m  [38;5;33mperkins[0m   [38;5;33msgill12[0m   [38;5;33mtuv[0m       [38;5;33mxiyuo[0m
+[38;5;33maustindg[0m  [38;5;33mcarolc24[0m  [38;5;33mgpilloud[0m  [38;5;33mjialul2[0m   [38;5;33mkl26[0m      [38;5;33mminhkhuu[0m  [38;5;33mqingr[0m     [38;5;33mshrm145[0m   [38;5;33mtylerj11[0m  [38;5;33myangyiyy[0m
+[38;5;33mawb[0m       [38;5;33mchenkrk[0m   [38;5;33mgrassela[0m  [38;5;33mjisooj[0m    [38;5;33mkworede[0m   [38;5;33mmvh92[0m     [38;5;33mrigodiaz[0m  [38;5;33msimenz[0m    [38;5;33mumaymah[0m   [38;5;33myijia987[0m
+]0;wlc2013@klaatu:/homes[wlc2013@klaatu homes]$ cd ..
+]0;wlc2013@klaatu:/[wlc2013@klaatu /]$ ls
+[0m[38;5;51mbin[0m   [38;5;33mdev[0m  [38;5;33mhome[0m   [38;5;51mlib[0m    [38;5;33mlost+found[0m  [38;5;33mmisc[0m  [38;5;33mnet[0m  [38;5;33mproc[0m  [38;5;33mrun[0m   [38;5;33msrv[0m  [48;5;10;38;5;16mtmp[0m  [38;5;33musr[0m
+[38;5;33mboot[0m  [38;5;33metc[0m  [38;5;33mhomes[0m  [38;5;51mlib64[0m  [38;5;33mmedia[0m       [38;5;33mmnt[0m   [38;5;33mopt[0m  [38;5;33mroot[0m  [38;5;51msbin[0m  [38;5;33msys[0m  [38;5;51mu0[0m   [38;5;33mvar[0m
+]0;wlc2013@klaatu:/[wlc2013@klaatu /]$ grep wen[K[Klc2o13 [K[K[K[K013 etc/passwd
+[01;31m[Kwlc2013[m[K:x:26329:6152::/homes/[01;31m[Kwlc2013[m[K:/bin/bash
+]0;wlc2013@klaatu:/[wlc2013@klaatu /]$ exit
+exit
+
+Script done on Sat 03 Oct 2015 02:39:26 PM PDT
