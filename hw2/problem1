@@ -1,0 +1,16 @@
+wenlu cheng, cse 374
+homework 2
+
+problem1: using the following commands to output glorp
+
+#using echo to print the stdout
+echo glorp
+
+# print the stdout and then cat it
+echo glorp | cat
+
+# create a file called glorp and the ls the file
+echo > glorp | ls
+
+# print glorp to stdout and grep glorp from it
+echo glorp | grep glorp

@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ $# -lt 2 ];then
+   echo "Usage: $0 needs more than 2 arguments"
+   exit 1
+fi
+
+# get the first file
+FILE="$1"
+
+# skip the first file
+shift
+
+# append the date and line numbers
+date >> "$FILE"
+wc -l "$@" >> "$FILE"
+
+# this adds the total line if only two files
+if [ $# -eq 1  ];then
+   temp=$(wc -l "$1" | egrep -o ^[0-9]*)
+   echo $temp" total" >> "$FILE"
+fi
+
+exit

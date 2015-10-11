@@ -1,0 +1,1 @@
+alias private="chmod -R u=u,g=u,o= "
