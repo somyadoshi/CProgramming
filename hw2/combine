@@ -1,7 +1,7 @@
-# !/bin/bash
+#!/bin/bash
 
 if [ $# -lt  2 ];then
-   echo "${0}: need more than 2 arguments"
+   echo "${0}: need more than 2 arguments">&2
    exit 1
 fi
 
@@ -9,13 +9,14 @@ FILE="$1"
 
 # print error if file exists already
 if [ -f "$FILE" ];then
-   echo "Error: first file exists"
+   echo "Error: first file exists">&2
    exit 1
 fi
 # move to next argument
 shift
 
-for f in "$@";do
+for f in "$@";
+do
     cat "$f" 2>> "$FILE"
     shift
 done
