@@ -1,0 +1,3 @@
+I used grep only to grep everything that seems like URL and then I manually removed those URLs that contain 
+words like "wikipedia|100bestwebsites|oregonstate...etc"
+

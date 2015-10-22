@@ -1,0 +1,8 @@
+Wenlu Cheng, CSE 374
+Q1:
+It sets X lable to Rank and Y lable to Size(Bytes), then set the X-axis range to 0 to 100.
+The next following command set the output file name.
+The last command takes input column1 and column3 as separate input points.
+
+Q2:
+From the scatterplot, there is not a clear correlation between the popularity and the size of its index page. However, the sizes of index pages of those websites are generally small.
