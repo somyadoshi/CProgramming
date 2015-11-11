@@ -7,15 +7,18 @@
 // single node on the trie
 struct node{
     struct node* list[8];
-    struct word* res_word;
+    struct wordList* res_word;
 };
 
 // result word linked on the trie node
-struct word_list{
+struct wordList{
     char* str;
-    struct word* next;
+    struct wordList* next;
 };
 
-void freeTrie(node* root);
-
+struct node* create_root();
+void freeTrie(struct node* root);
+void freeWordList(struct wordList* res_word);
+void create_trie(char* word, struct node* root);
+struct wordList* newStr(char* text);
 #endif

@@ -4,7 +4,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<string.h>
-#include "tire_node.h"
+#include "trie_node.h"
 
 // construct the head root
 struct node* create_root(){
@@ -35,12 +35,12 @@ void freeWordList(struct wordList* res_word){
     if(res_word->next) {
         freeWordList(res_word->next);
     }
-    free(wordList->str);
+    free(res_word->str);
     free(res_word);
 }
 
 int convertStr(char key){
-    switch(key[i]){
+    switch(key){
         case('a'):
         case('b'):
         case('c'):
@@ -75,12 +75,13 @@ int convertStr(char key){
         case('y'):
         case('z'):
             return 9;
-        default: break;
+        default: 
+            return -1;
     }
 }
 
 // build up the tree based on the key given
-struct node* create_trie(char* word, struct node* root){
+void create_trie(char* word, struct node* root){
     for(int i = 0; i < strlen(word) - 1; i++){
         int key = convertStr(word[i]);
         // if at index position there is no node
@@ -91,15 +92,15 @@ struct node* create_trie(char* word, struct node* root){
         root = root->list[key - 2];
     }
     // deal with the bottom node
-    int low = convertStr(strlen(word) - 1);
+    int low = convertStr(word[strlen(word) - 1]);
     // there is a word node existed
-    if(root->list[low - 2]){
+	if(root->list[low - 2]){
         root = root->list[low - 2];
         struct wordList* tmp = root->res_word;
         // if there is next in the wordlist
-        while(tmp){
-            tmp = tmp->next;
-        }
+		while(tmp->next){
+			tmp = tmp->next;
+		}
         struct wordList* newptr = newStr(word);
         tmp->next = newptr;
     }else{
@@ -109,13 +110,18 @@ struct node* create_trie(char* word, struct node* root){
     }
 }
 
+char* search(struct node* root){
+    return root->list[5]->list[4]->list[0]->list[3]->list[5]->res_word->str;
+}
+
+
 // copy the given string into the wordlist
 struct wordList* newStr(char* text){
     char* copy_s = (char *)malloc(sizeof(char) * strlen(text));
     strncpy(copy_s, text, strlen(text));
     struct wordList* tmp = (struct wordList*)malloc(sizeof(struct wordList));
-    tmp-> str = copy_s;
-    tmp -> next = NULL;
+    tmp->str = copy_s;
+    tmp->next = NULL;
     return tmp;
 }
 
