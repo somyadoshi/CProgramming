@@ -4,14 +4,14 @@
 #ifndef TRIE_NODE_H
 #define TRIE_NODE_H
 
-// single node on the trie
-struct node{
+// single node on the trie, has list of its child and wordlist
+struct node {
     struct node* list[8];
     struct wordList* res_word;
 };
 
-// result word linked on the trie node
-struct wordList{
+// wordlist has a word and a list of words that have same digit input
+struct wordList {
     char* str;
     struct wordList* next;
 };
