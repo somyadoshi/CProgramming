@@ -1,6 +1,7 @@
 // Wenlu Cheng, Donglan Ni
 // HW 6
 // Memory manager skeleton code
+#include "mem.h"
 
 
 void* getmem (uintptr_t size){

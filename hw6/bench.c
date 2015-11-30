@@ -7,5 +7,6 @@
 
 
 int main(int argc, char* argv[]){
-    return 0;
+    char* test = getmem(100);
+    freemem(test);
 }
