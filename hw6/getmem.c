@@ -11,6 +11,7 @@ void* getmem(uintptr_t size) {
     block* res;  // result block that will be returned
     block* runner;  // modify the list
     block* newBlock;  // spilited block
+    block* prev;
     uintptr_t reqSize;  // actual size need to malloc
     if(size <= 0) {
         return NULL;
@@ -23,13 +24,23 @@ void* getmem(uintptr_t size) {
     if(!res) {  // did not get the block
     // if the required size is more than default malloc size
         if(reqSize > MoreSize + headerSize) {
-            res = (block*)malloc((int)reqSize + headerSize);
-            res->size = reqSize;
-            res->next = NULL;
-            return (void*)((uintptr_t)res + headerSize);
+            newBlock = (block*)malloc(reqSize + headerSize);
+            newBlock->size = reqSize;
+            newBlock->next = NULL;
+            return (void*)((uintptr_t)newBlock + headerSize);        
         } else {  // malloc defualt space and insert it into freelist, search again
-            requestMoreSize();            
+            requestMoreSize(MoreSize);            
             res = searchFreeBlock(reqSize);
+        }
+    }
+    //get previous block before 
+    runner = FREE_LIST;
+    while(runner && runner->next) {
+        if(runner->next == res) {
+            prev = runner;
+            break;
+        } else {
+            runner = runner->next;
         }
     }
     // get one block from freelist, now check if that block need to be divived or not
@@ -42,6 +53,7 @@ void* getmem(uintptr_t size) {
         newBlock->next = res->next;
         res->size = reqSize;
         res->next = NULL;
+        prev->next = newBlock;  // add the new block into the free list
     } else {
         // remove the block from freelist if res->size = reqSize + headerSize
         runner = FREE_LIST;
@@ -53,6 +65,7 @@ void* getmem(uintptr_t size) {
             }
         }
     }
+    SortFreeList();
     return (void*)((uintptr_t)res + headerSize);
 }
 
@@ -71,10 +84,38 @@ void* searchFreeBlock(uintptr_t size) {
     return NULL;
 }
 
+// request a big block from malloc and insert it in front of the free list
 void requestMoreSize() {
     block* tmp;
+    block* runner;
     tmp = (block*)malloc(MoreSize + headerSize);
     tmp->size = MoreSize;
     tmp->next = NULL;
-    freemem(tmp);
+    if(!FREE_LIST) {
+        FREE_LIST = tmp;
+    } else {
+        runner = FREE_LIST;
+        // front case
+        if(tmp < runner) { 
+            tmp->next = runner;
+            FREE_LIST = tmp;
+        } else {  // the new block will either be in the front or the back
+            while(runner && runner->next) {
+                runner = runner->next;
+            }
+            runner->next = tmp;
+        }
+    }
+}
+
+// insertion sort to sort the single linked list
+void SortFreeList() {
+    // length is 1 or 0, no need to sort
+    if(!FREE_LIST || !FREE_LIST->next) {
+        return;
+    block* head = FREE_LIST->next;
+    head->next = NULL;
+    block* insertion;
+    block* runner;
+    }
 }

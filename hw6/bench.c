@@ -8,5 +8,7 @@
 
 int main(int argc, char* argv[]){
     char* test = getmem(100);
+    //char* test2 = getmem(20);
+    //char* test3 = getmem(499999);
     freemem(test);
 }
