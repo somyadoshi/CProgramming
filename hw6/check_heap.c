@@ -4,7 +4,15 @@
 
 
 #include "mem.h"
-
-void check_heap(){
-    return NULL;
+#include "mem_impl.h"
+#include <assert.h>
+void check_heap() {
+  block* prev = FREE_LIST;
+  if (FREE_LIST != NULL) {
+    block* next = prev->next;
+    while (next != NULL) {
+      assert(prev < next);
+      assert(prev->size > 0 && prev->size >= threshold);
+    }
+  }
 }

@@ -15,7 +15,7 @@ struct block {
 };
 
 typedef struct block block;
-
+uintptr_t total_mallocsize;  //variable to store total malloc size 
 block* FREE_LIST;  // free list to hold all freed block
 
 void* searchFreeBlock(uintptr_t size);
@@ -23,5 +23,5 @@ void requestMoreSize();
 void coalesce(block* block1, block* block2);
 void* searchFreeBlock(uintptr_t size);
 void requestMoreSize();
-void SortFreeList();
+void insertFreeBlock(block* freeBlock);
 #endif

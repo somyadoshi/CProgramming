@@ -1,0 +1,6 @@
+break getmem
+break freemem
+break insertFreeBlock
+break requestMoreSize
+break searchFreeBlock
+break coalesce
